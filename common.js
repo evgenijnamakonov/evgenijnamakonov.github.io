@@ -1,5 +1,3 @@
-import MyMobileCrm from "./myCrm";
-
 function saveOrder() {
 
     /**
@@ -25,9 +23,9 @@ function saveOrder() {
     let CRM = new MyMobileCrm();
 
     CRM.addOrder(data).then((response) => {
-        alert(response)
+        console.log(response)
     }).catch((ExtendedError) => {
-        alert(ExtendedError.message)
+        console.log(ExtendedError.message)
     });
 }
 
@@ -38,10 +36,10 @@ function saveUser() {
      * @type {{amount, address, name, phone}}
      */
     let data = {
-        amount: document.getElementById('input-amount').value,
-        address: document.getElementById('input-address').value,
-        name: document.getElementById('input-name').value,
+        firstName: document.getElementById('input-firstName').value,
+        lastName: document.getElementById('input-lastName').value,
         phone: document.getElementById('input-phone').value,
+        email: document.getElementById('input-email').value,
     };
 
     /**
@@ -50,9 +48,9 @@ function saveUser() {
     let CRM = new MyMobileCrm();
 
     CRM.addUser(data).then((response) => {
-        alert(response);
+        console.log(response);
         location="https://evgenijnamakonov.github.io/order.html";
     }).catch((ExtendedError) => {
-        alert(ExtendedError.message)
+        console.log(ExtendedError.message)
     });
 }

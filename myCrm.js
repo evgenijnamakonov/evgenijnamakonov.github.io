@@ -2,7 +2,9 @@
  * Класс myMobileCrm выполняет rest запросы к firebase
  * Умеет создавать заказ, создавать нового пользователя сайта
  */
-export default class MyMobileCrm {
+
+
+class MyMobileCrm {
 
     /**
      * Метод асинхронный, возвращает Promise с информацией о выполненном запросе.
