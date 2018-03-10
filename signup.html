@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+    <meta charset = "UTF-8">
+    <link rel = "stylesheet" href = "css/main.css">
+    <title>Регистрация</title>
+</head>
+<body class = "body">
+<!-- myCrm -->
+<script type = "text/javascript">
+    // токен авторизации
+    let token = "tvMvUFHPXTfEwRc7bdfZ9hF6Y312";
+    // идентификатор приложения
+    let id = "-L6IgrYtmWEhEd1GYnMF";
+</script>
+<!-- myCrm -->
+<div class = "main">
+    <div class = "inputs">
+        <text class = "form-title">Регистрация пользователя</text>
+        <input id = "input-firstName" type = "text" placeholder = "Имя" />
+        <input id = "input-lastName" type = "text" placeholder = "Фамилия" />
+        <input id = "input-phone" type = "text" placeholder = "номер телефона" />
+        <input id = "input-email" type = "text" placeholder = "Email" />
+        <input id = "submit" onclick = {saveOrder()} type = "button" value = "Зарегистрироваться" />
+    </div>
+</div>
+<script type = "text/javascript" src = "myCrm.js"></script>
+<script type = "text/javascript" src = "common.js"></script>
+</body>
+</html>

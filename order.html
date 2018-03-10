@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+    <meta charset = "UTF-8">
+    <link rel = "stylesheet" href = "css/main.css">
+    <title>Создать заказ</title>
+</head>
+<body class = "body">
+<!-- myCrm -->
+<script type = "text/javascript">
+    // токен авторизации
+    let token = "tvMvUFHPXTfEwRc7bdfZ9hF6Y312";
+    // идентификатор приложения
+    let id = "-L6IgrYtmWEhEd1GYnMF";
+</script>
+<!-- myCrm -->
+<div class = "main">
+    <div class = "inputs">
+        <text class = "form-title">Тестовый заказ</text>
+        <input id = "input-amount" type = "text" placeholder = "Количество" />
+        <input id = "input-address" type = "text" placeholder = "Адрес" />
+        <input id = "input-name" type = "text" placeholder = "Ваше имя" />
+        <input id = "input-phone" type = "text" placeholder = "Номер телефона" />
+        <input id = "submit" onclick = {saveOrder()} type = "button" value = "Отправить заявку" />
+    </div>
+</div>
+<script type = "text/javascript" src = "myCrm.js"></script>
+<script type = "text/javascript" src = "common.js"></script>
+</body>
+</html>
