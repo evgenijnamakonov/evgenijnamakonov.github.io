@@ -1,6 +1,7 @@
 async function addOrder(data) {
 
     let xhr = new XMLHttpRequest();
+
     let request = new Promise((resolve, reject) => {
 
         try {
