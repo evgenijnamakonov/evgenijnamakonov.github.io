@@ -25,9 +25,9 @@ function saveOrder() {
     let CRM = new MyMobileCrm();
 
     CRM.addOrder(data).then((response) => {
-        console.log(response)
+        alert(response)
     }).catch((ExtendedError) => {
-        console.log(ExtendedError.message)
+        alert(ExtendedError.message)
     });
 }
 
@@ -50,8 +50,9 @@ function saveUser() {
     let CRM = new MyMobileCrm();
 
     CRM.addUser(data).then((response) => {
-        console.log(response)
+        alert(response);
+        location="https://evgenijnamakonov.github.io/order.html";
     }).catch((ExtendedError) => {
-        console.log(ExtendedError.message)
+        alert(ExtendedError.message)
     });
 }
