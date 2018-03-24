@@ -3,7 +3,6 @@
  * Умеет создавать заказ, создавать нового пользователя сайта
  */
 
-
 class MyMobileCrm {
 
     /**
@@ -26,12 +25,14 @@ class MyMobileCrm {
 
         let xhr = new XMLHttpRequest();
 
+        let time = new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate();
+
         return new Promise((resolve, reject) => {
 
             try {
                 xhr.open('POST', "https://my-mobile-crm-1331.firebaseio.com/apps/" + token + "/" + id + "/orders.json", false);
 
-                xhr.send(JSON.stringify({ ...data }));
+                xhr.send(JSON.stringify({ ...data, date: time, utc: new Date(), status: 'new' }));
 
                 switch ( xhr.status ) {
                     case 200:
@@ -68,12 +69,14 @@ class MyMobileCrm {
 
         let xhr = new XMLHttpRequest();
 
+        let time = new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate();
+
         return new Promise((resolve, reject) => {
 
             try {
                 xhr.open('POST', "https://my-mobile-crm-1331.firebaseio.com/apps/" + token + "/" + id + "/users.json", false);
 
-                xhr.send(JSON.stringify({ ...data }));
+                xhr.send(JSON.stringify({ ...data, date: time, utc: new Date() }));
 
                 switch ( xhr.status ) {
                     case 200:
