@@ -5,6 +5,17 @@
 
 class MyMobileCrm {
 
+    getMonth() {
+        var month = new Date().getMonth() + 1;
+
+        if ( (month+'').length === 1 ) {
+            return `0${month}`;
+        }
+        else {
+            return month
+        }
+    }
+
     /**
      * Метод асинхронный, возвращает Promise с информацией о выполненном запросе.
      * Добавляет в базу запись о создании заказа
@@ -26,7 +37,7 @@ class MyMobileCrm {
 
         let xhr = new XMLHttpRequest();
 
-        let time = new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate();
+        let time = new Date().getFullYear() + '-' + this.getMonth() + '-' + new Date().getDate();
 
         return new Promise((resolve, reject) => {
 
