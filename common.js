@@ -13,7 +13,7 @@ function saveOrder() {
         address: document.getElementById('input-address').value,
         name: document.getElementById('input-name').value,
         phone: document.getElementById('input-phone').value,
-        product: 'Какой-нибудь товар'
+        product: document.getElementById('input-product').value,
     };
 
     /**

@@ -21,6 +21,7 @@ class MyMobileCrm {
      * @param data
      * @returns {Promise<any>}
      */
+
     async addOrder(data) {
 
         let xhr = new XMLHttpRequest();
